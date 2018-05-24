@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Travel agency</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="main.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+</head>
+<body>
+
+<div class='container'>
+	<div>
+		<h3 class='display-4 nav-pad' >Travel Agency</h3>
+			<div>
+				<ul class='nav nav-tabs nav-fill'>
+					<li class='nav-item active'>
+						<a class='nav-link active' href='#'>Strona głowna
+						<span class='sr-only'></span></a>
+					</li>
+					
+					<li class='nav-item dropdown'>
+						<a a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Kierunki podróży</a>
+						<div class='dropdown-menu'>
+							<a class='dropdown-item' href='#' id='kierunki'>Polska</a>
+							<a class='dropdown-item' href='#' id='kierunki'>Europa</a>
+							<a class='dropdown-item' href='#' id='kierunki'>Azja</a>
+							<a class='dropdown-item' href='#' id='kierunki'>Ameryka Północna</a>
+							<a class='dropdown-item' href='#' id='kierunki'>Ameryka Południowa</a>
+						</div>
+					</li>
+					
+					<li class='nav-item'>
+						<a class='nav-link' href='oferta.html'>Oferta</a>
+					</li>
+					
+					<li class = 'nav-item'>
+						<a class='nav-link' href='rysuj.html'>Narysyj swoją podróż</a>
+					</li>
+
+
+					<li class='nav-item'>
+						<a class='nav-link' href='kontakt.html'>Kontakt</a>
+					</li>
+
+				</ul>
+			</div>
+	</div>
+	
+	<div class='img-main'>
+		<img src="image/palm-back.jpg" class='img-fluid' alt="Responsive image">
+		<h2 class='display-1' id='onimage' >Just travel.</h2>
+	</div>
+	
+	<div class='dataIZegar bg-light'>
+		<div class="row" id = 'row-clock'>
+			<div class='col-2'></div>
+
+			<div class='col-8'>
+				<h2 id= 'date'>Dziś jest: </h1>
+				<h4 id = 'clock'>
+					00 : 00 . 00
+				</h4>
+			 <script src="js/clock.js"></script>
+
+			</div>
+
+		</div>
+	</div>
+
+	<div class="row justify-content-center">		
+
+		<div class="slideshow-container">
+
+
+
+			<div class="myslides fade">
+				<div class="numbers">1 / 3</div>
+				<div><img src="image/nowyJork.jpg" class="img-fluid" style="width: 100%"></div>
+				<div class="caption" style="color: #FFD600">Nowy Jork</div>
+			</div>
+
+
+			<div class="myslides fade"> 
+				<div class="numbers">2 / 3</div>
+				<div><img src="image/tajlandia.jpg" class="img-fluid" style="width: 100%"></div>
+				<div class="caption" style="color: #16008F">Tajlandia</div>
+			</div>
+
+			<div class="myslides fade">
+				<div class="numbers">2 / 3</div>
+				<div><img src="image/rio.jpg" class="img-fluid" style="width: 100%"></div>
+				<div class="caption ">Rio De Janeiro</div>
+			</div>
+
+
+			<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+			<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+
+			</div>
+
+			<br>
+
+			<div style="text-align:center">
+			<span class="dots" onclick="currentSlide(1)"></span> 
+			<span class="dots" onclick="currentSlide(2)"></span> 
+			<span class="dots" onclick="currentSlide(3)"></span> 
+
+			</div>
+			<script src="js/prezentacja.js"></script>
+		
+		</div>
+
+
+
+
+	<div class='converter bg-dark'>
+		<div class="row justify-content-center">
+			<h3 class="text-white">Przelicz waluty, aby wiedzieć ile pieniędzy zabrać ze sobą na wakacje</h3>			
+		</div>
+
+		<div class="row justify-content-center">
+			<div class="col-8 text-white">
+				<form class='contact-form'>
+				  <div class="form-row">
+
+				    <div class="form-group col-md-6">
+				      <label for="euro">EUR</label>
+				      <input type="number" min='0' class="form-control" id="inputEuro" placeholder="EUR"
+				      oninput="currencyConverter(this.id,this.value)" onchange="currencyConverter(this.id,this.value)">
+				    </div>
+
+				    <div class="form-group col-md-6">
+				      <label for="zloty">PLN</label>
+				      <input type="number" min='0' class="form-control" id="inputZloty" placeholder="PLN"
+				      oninput="currencyConverter(this.id,this.value)" onchange="currencyConverter(this.id,this.value)">	
+				    </div>
+
+				    <div class="form-group col-md-6">
+				      <label for="dolary">USD</label>
+				      <input type="number" min='0' class="form-control" id="inputDolar" placeholder="USD"
+				      oninput="currencyConverter(this.id, this.value)" onchange="currencyConverter(this.id,this.value)">	
+				    </div>
+
+				    <div class="form-group col-md-6">
+				      <label for="funt">GBP</label>
+				      <input type="number" min='0' class="form-control" id="inputFunt" placeholder="GBP"
+				      oninput="currencyConverter(this.id,this.value)" onchange="currencyConverter(this.id, this.value)">	
+				    </div>
+
+
+				  </div>
+				  <script src="js/converter.js"></script>
+				</form>	
+
+
+			</div>
+
+
+		</div>
+	</div>
+
+<footer class="page-footer font-small blue">
+ 	 <div class="footer-copyright text-center py-3">Tyle osób odwiedziło stronę: 
+ 			  <a href='http://www.counterliczniki.com'>www.Counterliczniki.com</a> <script type='text/javascript' src='https://www.counterliczniki.com/auth.php?id=d6c0254b2bd2b857cca576490f08bc87cb686eb5'></script>
+<script type="text/javascript" src="https://www.counterliczniki.com/pl/home/counter/371086/t/3"></script>
+ 	 </div>
+
+</footer>
+                
+	<script src="js/kierunki.js"></script>
+
+</div>
+
+</body>
+</html>

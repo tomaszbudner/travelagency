@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Kontakt</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="main.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+
+<body>
+<div class='container'>
+	<div>
+		<h3 class='display-4 nav-pad' >Travel Agency</h3>
+			<div>
+				<ul class='nav nav-tabs nav-fill'>
+					<li class='nav-item'>
+						<a class='nav-link' href='index.html'>Strona głowna
+						<span class='sr-only'></span></a>
+					</li>
+					
+					<li class='nav-item dropdown'>
+						<a a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Kierunki podróży</a>
+						<div class='dropdown-menu'>
+							<a class='dropdown-item' href='#' id='kierunki'>Polska</a>
+							<a class='dropdown-item' href='#' id='kierunki'>Europa</a>
+							<a class='dropdown-item' href='#' id='kierunki'>Azja</a>
+							<a class='dropdown-item' href='#' id='kierunki'>Ameryka Północna</a>
+							<a class='dropdown-item' href='#' id='kierunki'>Ameryka Południowa</a>
+						</div>
+					</li>
+					
+					<li class='nav-item'>
+						<a class='nav-link' href='oferta.html'>Oferta</a>
+					</li>
+					
+					<li class = 'nav-item'>
+						<a class='nav-link' href='rysuj.html'>Narysyj swoją podróż</a>
+					</li>
+
+
+					<li class='nav-item active'>
+						<a class='nav-link active' href='#'>Kontakt</a>
+					</li>
+
+				</ul>
+			</div>
+	</div>
+
+	<div class="row bg-light">
+		<div class="col-6">
+			
+			<div class="row">
+				<h5 id='text-contact'>Napisz do nas, aby się skontaktować z naszym biurem podróży:</h5>
+			</div>
+
+			<form class='contact-form' action="mailto:tomasz.budner@student.put.poznan.pl" enctype='text/plain'>
+			  
+			  <div class="form-row">
+			    <div class="form-group col-md-6">
+			      <label for="inputName">Imię</label>
+			      <input type="text" class="form-control" id="inputName" placeholder="Imię">
+			    </div>
+			    <div class="form-group col-md-6">
+			      <label for="inputSecondName">Nazwisko</label>
+			      <input type="text" class="form-control" id="inputSecondName" placeholder="Nazwisko">
+			    </div>
+			  </div>
+
+			  <div class="form-group">
+			    <label for="inputMail">E-mail</label>
+			    <input type="mail" class="form-control" id="inputMail" placeholder="mail@poczta.pl">
+			  </div>
+
+			  <div class="form-group">
+			    <label for="inputAddress">Miasto</label>
+			    <input type="text" class="form-control" id="inputAddress" placeholder="Miasto">
+			  </div>
+
+			
+
+			  <div class="form-group col-md-6">
+			    <div class="form-check">
+  					<input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+  					<label class="form-check-label" for="exampleRadios1">
+    					Kobieta
+  					</label>
+				</div>
+				
+				<div class="form-check">
+				  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+				  <label class="form-check-label" for="exampleRadios2">
+				    Mężczyzna
+				  </label>
+				</div>
+			</div>
+			 
+			<div class="form-group">
+  				<label for="emailText">Treść zapytania:</label>
+  				<textarea class="form-control" rows="10" id="emailText"></textarea>
+			</div>
+
+
+			<div class = 'form-group d-flex flex-row-reverse'>
+				<button type="submit" class="btn btn-info">Wyślij</button>
+			</div>			
+
+			</form>	
+
+		</div>
+	
+
+		<div class="col-6" id='map-container'>
+			<h6>Dane do kontaktu:</h6>
+			<table class='table-responsive table-bordered table-hover'id='tabelka'></table>
+			<script src="js/table.js"></script>
+		</div>
+
+		</div>
+
+
+	</div>
+	
+	<footer class="page-footer font-small blue">
+ 		<div class="footer-copyright text-center py-3">2018</div>
+	</footer>
+
+	<script src="js/kierunki.js"></script>
+
+</body>
+
+
+
+</html>
